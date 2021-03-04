@@ -3,6 +3,7 @@ const submitButton = document.querySelector('#sub');
 const clearButton = document.querySelector('#clear');
 const display = document.querySelector('#displayResults');
 const input = document.querySelector('#inputId');
+const mykey = config.MY_KEY;
 //grab the data you need to display results
 function domainData(data){
     const settings = {
@@ -12,7 +13,7 @@ function domainData(data){
         "method": "POST",
         "headers": {
             "content-type": "application/x-www-form-urlencoded",
-            "x-rapidapi-key": "15f45eafc4mshb706cfc1228c737p1480d2jsn9e9eeac4290e",
+            "x-rapidapi-key": `${mykey}`,
             "x-rapidapi-host": "domain-checker7.p.rapidapi.com"
         },
         "data": {
