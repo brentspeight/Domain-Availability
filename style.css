@@ -1,3 +1,17 @@
+#map {
+  height: 25%;
+  width: 30%;
+  position: relative;
+  top: 50rem;
+  left: 0px;
+  outline: blue solid 5px;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 #firstCon {
   position: relative;
   top: 100px;
@@ -25,8 +39,8 @@ p {
 
 #displayResults h3 {
   color: aliceblue;
-  animation: fadeIn ease 8s;
-  -webkit-animation: fadeIn ease 8s;
+  animation: fadeIn ease 5s;
+  -webkit-animation: fadeIn ease 5s;
 }
 
 @keyframes fadeIn {

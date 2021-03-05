@@ -1,0 +1,28 @@
+{
+  "name": "domain-availability",
+  "version": "1.0.0",
+  "description": "",
+  "main": "config.js",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brentspeight/Domain-Availability.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brentspeight/Domain-Availability/issues"
+  },
+  "homepage": "https://github.com/brentspeight/Domain-Availability#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3"
+  },
+  "browserslist": [
+    "last 1 chrome versions"
+  ],
+  "dependencies": {
+    "@googlemaps/js-api-loader": "^1.11.2"
+  }
+}
