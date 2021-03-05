@@ -1,9 +1,26 @@
+import {config, googleApi} from './config.js'
+import { Loader } from "@googlemaps/js-api-loader"
 //select all elements needed
 const submitButton = document.querySelector('#sub');
 const clearButton = document.querySelector('#clear');
 const display = document.querySelector('#displayResults');
 const input = document.querySelector('#inputId');
 const mykey = config.MY_KEY;
+let map;
+
+
+const loader = new Loader({
+    apiKey: googleApi,
+    version: "weekly",
+   
+  });
+  loader.load().then(() => {
+    map = new google.maps.Map(document.getElementById("map"), {
+      center: { lat: -34.397, lng: 150.644 },
+      zoom: 8,
+    });
+  });
+
 //grab the data you need to display results
 function domainData(data){
     const settings = {
@@ -39,6 +56,11 @@ function html(data){
     `
     return markUp;
 }
+function clear(){
+    display.innerHTML = '';
+    input.value = '';
+    console.log('data cleared');
+}
 //when the clear button is clicked clear the input
 //when submit button is clicked get the value of the users input and attach to the query
 submitButton.addEventListener('click', async function(e){
@@ -50,3 +72,7 @@ submitButton.addEventListener('click', async function(e){
 },{
     once : false
   })
+
+  clearButton.addEventListener('click', clear,{
+      once: false
+  });
